@@ -19,21 +19,22 @@ Queue::~Queue()
 
 void Queue::deleteQueue()
 {
+	//todo
 }
 
 bool Queue::isEmpty() const
 {
-	return false;
+	return items;
 }
 
 bool Queue::isFull() const
 {
-	return false;
+	return queue_size == items;
 }
 
 int Queue::size() const
 {
-	return 0;
+	return items;
 }
 
 bool Queue::enqueue(const Item& item)
