@@ -16,7 +16,6 @@ TODO:
 - add item (push?) to the end of queue /enqueue
 - pull item from the head of queue /dequeue
 
-2.
-- class template    
+2. class template    
 
 3. deep copy constructor and assignment operator
