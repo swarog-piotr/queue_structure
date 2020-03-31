@@ -7,8 +7,13 @@ class Queue
 private:
 	enum {Q_SIZE = 10};
     const int queue_size;
-
-
+	int items;
+	struct Node {
+		Item item;
+		Node* next;
+	};
+	Node* frontNode;
+	Node* rearNode;
 
 public:
 	Queue(int size = Q_SIZE);
@@ -17,7 +22,7 @@ public:
 	bool enqueue(const Item& item);
 	bool dequeue(Item& item);
 
-	void remove();
+	void deleteQueue();
 	bool isEmpty() const;
 	bool isFull() const;
 	int size() const;
@@ -36,10 +41,4 @@ public:
 
 - add item (push?) to the end of queue /enqueue
 - pull item from the head of queue /dequeue
-
-
-
-
-
-
 */

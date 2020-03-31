@@ -3,14 +3,17 @@
 
 Queue::Queue(int size) : queue_size(size)
 {
-
+	frontNode = rearNode = nullptr;
+	items = 0;
 }
 
 Queue::~Queue()
 {
+	delete frontNode;
+	delete rearNode;
 }
 
-void Queue::remove()
+void Queue::deleteQueue()
 {
 }
 
@@ -31,10 +34,36 @@ int Queue::size() const
 
 bool Queue::enqueue(const Item& item)
 {
-	return false;
+	if (isFull()) return false;
+
+	Node* temp = new Node;
+	temp->item = item;
+	temp->next= nullptr;
+	
+	items++;
+
+	if (frontNode == nullptr) 
+		frontNode = temp; //if que is empty, new item on the front
+	else 
+		rearNode->next = temp; //else new item n
+
+	rearNode = temp;
+	return true;
 }
 
 bool Queue::dequeue(Item& item)
 {
-	return false;
+	if (isEmpty()) return false;
+
+	item = frontNode->item;
+	items--;
+
+	Node* temp = frontNode;
+	frontNode = frontNode->next;
+	delete temp;
+
+	if (isEmpty())
+		rearNode == nullptr;
+
+	return true;
 }
