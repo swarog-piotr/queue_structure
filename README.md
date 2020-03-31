@@ -14,7 +14,8 @@ TODO:
 - check how many items
 
 - add item (push?) to the end of queue /enqueue
-- pull item from the head of queue /dequeue
+- pull item from the head of queue /dequeue 
+
 
 2. class template    
 
