@@ -9,8 +9,12 @@ Queue::Queue(int size) : queue_size(size)
 
 Queue::~Queue()
 {
-	delete frontNode;
-	delete rearNode;
+	Node* temp;
+	while (!isEmpty()) {
+		temp = frontNode;
+		frontNode = frontNode->next;
+		delete temp;
+	}
 }
 
 void Queue::deleteQueue()
