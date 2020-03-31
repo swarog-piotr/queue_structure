@@ -5,7 +5,7 @@ My attempt to create a functional queue structure.
 
 TODO:
 
-interface:
+1.interface:
 - create empty queue(with item limit)
 - delete queue
 
@@ -18,3 +18,5 @@ interface:
 
 2.
 - class template    
+
+3. deep copy constructor and assignment operator
